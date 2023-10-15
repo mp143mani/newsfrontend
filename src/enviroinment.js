@@ -1,5 +1,5 @@
 const env = {
-  apiurl: "https://mysitebackend.onrender.com/",
+  apiurl: "https://mysitebackend.onrender.com",
 };
 
 export default env;
