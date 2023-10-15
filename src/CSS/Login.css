@@ -1,0 +1,40 @@
+.login-wrapper{
+    text-align: center;
+    margin-top:6rem
+  }
+  
+  .login-main-wrapper{
+    width: 450px;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+
+  .wallpaper{
+    /* background-image: url(../assets/imgs/login\ image.jpg); */
+    height: 100vh;
+  }
+
+  .wallpaper1{
+    /* background-image: url(../assets/imgs/uwp2886922.webp); */
+    height: 100vh;
+  }
+
+  .wallpaper2{
+    /* background-image: url(../assets/imgs/uwp2857961.gif); */
+    height: 100vh;
+  }
+
+  .wallpaper3{
+    /* background-image: url(../assets/imgs/uwp2886922.webp); */
+    height: 100vh;
+  }
+
+  .verti{
+    margin-left: 47%;
+  }
+
+  .Guidelines{
+    margin-top: 2rem;
+    font-weight: 450;
+    color:rgb(6, 6, 6)
+  }

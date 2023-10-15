@@ -1,0 +1,43 @@
+.App {
+  /* text-align: center; */
+}
+
+*{margin: 0; padding:0; box-sizing: border-box;}
+img{
+  height :40rem
+}
+
+.adjust{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.adjust h3{
+  margin: 0.3rem;
+}
+
+.adjust h2{
+  margin: 0.3rem;
+}
+
+.set{
+  margin-bottom: 10rem;
+}
+
+.set1{ margin-bottom: 3rem;}
+
+.set4{
+  margin-top:8rem ;
+}
+
+.newsImage{
+  background:gray ;
+    height: 100vh;
+}
+
+.pad{
+  padding-top: 5rem;
+}
