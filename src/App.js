@@ -4,7 +4,7 @@ import {  Route, Routes } from "react-router-dom";
 import NewsFront from './News/NewsFront';
 import Login from './LoginComponents/Login';
 import ManageNews from './News/ManageNews';
-import Try from './News/Try';
+// import Try from './News/Try';
 import Register from './LoginComponents/Register';
 import Forgot from './LoginComponents/Forgot';
 import RegisterReq from './LoginComponents/RegisterReq';

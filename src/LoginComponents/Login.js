@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Modal from "react-bootstrap";
+// import Modal from "react-bootstrap";
 import axios from "axios";
 import env from "../enviroinment";
 import { useNavigate } from "react-router-dom";
@@ -9,14 +9,12 @@ import Spinner from "react-bootstrap/Spinner";
 import "../CSS/Login.css";
 // import ModalNew from "../ModalNew";
 
-
 function Login() {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let [toggle, setToggle] = useState(false);
   let [message, setMessage] = useState("");
   let navigate = useNavigate();
-
 
   let handleForgotpass = async () => {
     navigate("/Forgot");
@@ -36,13 +34,15 @@ function Login() {
     if (res.data.statusCode === 200) {
       setToggle(false);
       localStorage.setItem("token", res.data.token);
-      if (res.data.roleVerify === "Verified")
-      {
-        handleVerify()};
-      if (res.data.roleVerify === "Access To Add News")
-      {handleAddNews()};
-      if (res.data.roleVerify === "IN-Process")
-      {handleProcess()};
+      if (res.data.roleVerify === "Verified") {
+        handleVerify();
+      }
+      if (res.data.roleVerify === "Access To Add News") {
+        handleAddNews();
+      }
+      if (res.data.roleVerify === "IN-Process") {
+        handleProcess();
+      }
     } else {
       setToggle(false);
       setMessage(res.data.message);
@@ -52,21 +52,21 @@ function Login() {
     }
   };
 
-  const handleVerify = async () => {   
-        navigate("/ManageNews"); 
+  const handleVerify = async () => {
+    navigate("/ManageNews");
   };
 
-  const handleAddNews = async (email) => {   
-    navigate("/AddNews"); 
-};
+  const handleAddNews = async (email) => {
+    navigate("/AddNews");
+  };
 
-const handleProcess = async (email) => {   
-  alert("Your Account yet to verify by co-ordinator") 
-};
+  const handleProcess = async (email) => {
+    alert("Your Account yet to verify by co-ordinator");
+  };
 
   return (
     <>
-       <div className="container-fluid wallpaper">
+      <div className="container-fluid wallpaper">
         <div className="login-wrapper ">
           <h1>Welcome to Manage News Panel</h1>
           <p>Login to Continue</p>
@@ -99,7 +99,7 @@ const handleProcess = async (email) => {
             <Button
               className="mx-2 mt-2"
               variant="primary"
-              onClick={() => handleRegister() }
+              onClick={() => handleRegister()}
             >
               Sign Up
             </Button>
@@ -110,7 +110,7 @@ const handleProcess = async (email) => {
             >
               Forgot Password
             </Button>
-      </Form>
+          </Form>
           {toggle ? <Spinner animation="border" variant="primary" /> : <></>}
           {message ? (
             <div style={{ color: "red", textAlign: "center" }}>{message}</div>
@@ -118,8 +118,7 @@ const handleProcess = async (email) => {
             <></>
           )}
         </div>
-      </div> 
-    
+      </div>
     </>
   );
 }

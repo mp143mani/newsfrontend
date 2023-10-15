@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "reactstrap";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import "../App.css";
 import ModalNew from "./ModalNew";
 
